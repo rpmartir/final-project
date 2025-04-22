@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ryan Martir Final Project</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      body {
+        margin: 1rem;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: black;
+        font-size: 5rem;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin: 15% 4rem 0 4rem;
+      }
+      .last {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgb(0, 0, 0);
+      }
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="grid-container">
+      <div>Failure</div>
+      <div>is</div>
+      <div class="last">destined</div>
+      <div>Success</div>
+      <div>is</div>
+      <div class="last">temporary</div>
+      <div>All</div>
+      <div>records</div>
+      <div>will</div>
+      <div class="last">fade</div>
+    </div>
+    <script>
+      function randomNumber(min, max) {
+        return (Math.random() * (max - min)) + min;
+      }
+      let fade = 0;
+      document.addEventListener("click", function () {
+        let min = 0;
+        let max = 0.2;
+        fade += Math.random() * (max - min) + min;
+        if (fade > 1) {
+          fade = 0;
+        }
+        const lastElements = document.querySelectorAll(".last");
+        lastElements.forEach(element => {
+          element.style.opacity = 1 - fade;
+        });
+      });
+    </script>
+  </body>
+</html>
