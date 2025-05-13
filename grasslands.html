@@ -51,13 +51,23 @@
         color: rgb(170, 49, 1);
     }
 
+    .sky{
+        background-color: aqua;
+        position: fixed;
+        top: 0;
+        width: auto;
+    }
+
+
     .sun {
         color: yellow;
         font-size: 120px;
         text-align: right;
         font-weight: 700;
-        text-align: top;
-        margin-top: -12px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: auto;
     }
 
     .tree {
@@ -67,12 +77,25 @@
         font-stretch: expanded;
         transform: rotate(90deg);
     }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: auto;
+        
+    }
       
     </style>
   </head>
   <body>
 
-    
+    <div class="sky"></div>
+    <div class="sun">SUN</div>
+
+
+
+   <!-- 
 
     
     <div class="grid-container-sky">
